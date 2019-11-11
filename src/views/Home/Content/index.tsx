@@ -80,18 +80,18 @@ const Content = () => {
 
             <Grid item xs={false} md={1} />
             <Grid item xs={12} md={10} style={{ textAlign: 'center', }}>
-                <div style={{ marginTop: '0.5rem', marginBottom: '1.8rem' }}>
+                <div style={{ marginTop: '2rem', marginBottom: '3.5rem' }}>
                     <div style={{ fontSize: '1.5rem', marginBottom: '1rem', fontWeight: 'bold' }}>About us</div>
                     <div style={{
                         display: 'flex',
                         flexDirection: 'column',
                         justifyContent: 'space-between',
                     }}>
-                        <div style={{ marginBottom: '1rem', textAlign: 'justify' }}>
-                            {`Istrability is a software development company that is actively developing Web applications (and other software) for the last two years. With strong expert knowledge it can help you optimize your business processes and realize your digital ideas.`}
+                        <div style={{ marginBottom: '1rem', textAlign: 'center' }}>
+                            {`Istrability is a software development company that is actively developing Web apps (and other software) since 2019. With the help of our expert knowledge you can realize your digital ideas or optimize your business processes.`}
                         </div>
-                        <div style={{ marginBottom: '1rem', textAlign: 'justify' }}>
-                            {`Our area of expertize is building frontend part of Web applications (in React), backend part of Web applications and scripting (in NodeJS), whole Web applications, and system applications (in Rust).`}
+                        <div style={{ marginBottom: '1rem', textAlign: 'center' }}>
+                            {`Our area of expertize is building frontend part of Web apps (in React), backend part of Web apps and scripting (in NodeJS), whole Web apps, and system apps (in Rust).`}
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ const Content = () => {
 
 
             <Grid item xs={12} md={12} style={{ textAlign: 'center' }}>
-                <div style={{ marginBottom: '3rem' }}>
+                <div style={{ marginBottom: '4.5rem' }}>
                     <div style={{ fontSize: '1.5rem', marginBottom: '0.5rem', fontWeight: 'bold' }}>Contact &amp; Location</div>
                     <div style={{
                         display: 'flex',
@@ -110,7 +110,7 @@ const Content = () => {
                             <PhoneIcon className={classes.contactItemIcon} />
                             <span className={classes.contactItemContent}>+385 95 857 6949</span>
                         </a>
-                        <a href='mail:istrability@gmail.com' className={classes.contactItem}>
+                        <a href='mailto:istrability@gmail.com' className={classes.contactItem}>
                             <MailOutlineIcon className={classes.contactItemIcon} />
                             <span className={classes.contactItemContent}>vrafaeli@msn.com</span>
                         </a>
@@ -124,7 +124,7 @@ const Content = () => {
                         </a>
                         <a
                             /* href='https://www.google.hr/maps/@45.7918911,15.9551435,6.00z' */
-                            href='https://www.google.com/maps/place/Zagreb/@46.1928931,11.0642306,6z'
+                            href='https://www.google.com/maps/place/Zagreb/@45.8401746,15.8942922,5z'
                             target="_blank"
                             rel="noopener noreferrer"
                             className={classes.contactItem}

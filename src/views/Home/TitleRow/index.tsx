@@ -1,16 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@mui/styles';
 import { Link } from 'react-router-dom';
+import Flags from 'country-flag-icons/react/3x2'
 
 /* import SpreadMenu from './SpreadMenu'; */
-import SidebarMenu from './SidebarMenu';
-import ImageSwitcher from './ImageSwitcher';
+/* import SidebarMenu from './SidebarMenu'; */
 
 const useStyles = makeStyles({
   titleRow: {
     position: 'sticky',
     top: '0rem',
-    backgroundColor: '#223',
+    backgroundColor: '#0B0B18',
     width: '100%',
     padding: '0rem 1.5rem 0rem 1.5rem',
     display: 'flex',
@@ -21,22 +21,31 @@ const useStyles = makeStyles({
     height: '3rem',
     boxSizing: 'border-box',
     zIndex: 100,
+    // boxShadow: '0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%)'
   },
   titlePlaceholder: {
-    height: '4rem',
-    backgroundColor: '#223',
+    height: '1rem',
+    top: '4rem',
+    backgroundColor: '#0B0B18',
     position: 'absolute',
+    //zIndex: 1000,
     width: '100%',
   },
   mdMenu: {
     display: 'none',
   },
   xsMenu: {
+    height: '100%',
+    display: 'flex',
+    alignItems: 'center',
+  },
+  flag: {
+    width: '1.4rem', 
   },
   title: {
     color: '#FFFFFE',
     fontSize: '1.5rem',
-    fontWeight: 'bold',
+    // fontWeight: 'bold',
     cursor: 'pointer',
     textDecoration: 'none',
     display: 'flex',
@@ -55,16 +64,19 @@ const useStyles = makeStyles({
       paddingRight: '3.5rem',
     },
     titlePlaceholder: {
-      height: '5rem',
+      top: '5rem',
     },
     title: {
-      fontSize: '2.3rem',
+      fontSize: '1.8rem',
+    },
+    flag: {
+      width: '1.5rem',
+      cursor: 'pointer',
     },
     mdMenu: {
-      display: 'flex',
-      flexDirection: 'row',
-      justifyContent: 'right',
-      alignItems: 'center'
+      //display: 'flex',
+      //flexDirection: 'row',
+      //justifyContent: 'right',
     },
     /* xsMenu: {
         display: 'none',
@@ -78,10 +90,11 @@ const useStyles = makeStyles({
 
 const TitleRow = (/* { servicesClickHandler, contactClickHandler, logoClickedHandler, currentRoute } */) => {
   const classes = useStyles();
+  const [language, setLanguage] = useState('US');
 
   return (
     <>
-      <div style={{ height: '1rem', backgroundColor: '#223', width: '100%' }} />
+      <div style={{ height: '1rem', backgroundColor: '#0B0B18', width: '100%' }} />
       <div className={classes.titlePlaceholder} />
       <div className={classes.titleRow}>
         <Link
@@ -96,11 +109,30 @@ const TitleRow = (/* { servicesClickHandler, contactClickHandler, logoClickedHan
                 </div> */}
 
         <div className={classes.xsMenu}>
-          <SidebarMenu />
+          <div
+            className={classes.flag}
+            style={{marginRight: '1rem', opacity: language === 'US' ? 1 : 0.5}}
+            onClick={() => setLanguage('US')}
+          >
+            <Flags.US title={'English'} />
+          </div>
+          <div
+            className={classes.flag}
+            style={{marginRight: '1rem', opacity: language === 'HR' ? 1 : 0.5}}
+            onClick={() => setLanguage('HR')}
+          >
+            <Flags.HR title={'Hrvatski'} />
+          </div>
+          <div
+            className={classes.flag}
+            style={{opacity: language === 'FR' ? 1 : 0.5}}
+            onClick={() => setLanguage('FR')}
+          >
+            <Flags.FR title={'Français'} />
+          </div>
+          {/* <SidebarMenu /> */}
         </div>
       </div>
-
-      <ImageSwitcher />
     </>
   );
 };

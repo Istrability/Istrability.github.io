@@ -1,8 +1,9 @@
-import React, { useEffect, } from 'react';
+import { useEffect, } from 'react';
 import TitleRow from './TitleRow';
 import { makeStyles } from '@mui/styles';
 import { useLocation } from 'react-router-dom';
 import Content from './Content';
+import ImageSwitcher from './ImageSwitcher';
 
 const useStyles = makeStyles(theme => {
   return ({
@@ -29,6 +30,9 @@ const Home = () => {
   return (
     <div className={classes.outer}>
       <TitleRow />
+
+      <ImageSwitcher />
+
       <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -39,8 +43,9 @@ const Home = () => {
       }}>
         <Content />
       </div>
-      <div style={{ width: '100%', backgroundColor: '#223', color: 'white', fontSize: '0.9rem', textAlign: 'center', padding: '3px', boxSizing: 'border-box', }}>
-        &copy; Istrability, 2021
+      
+      <div style={{ width: '100%', backgroundColor: '#0B0B18', color: 'white', fontSize: '0.9rem', textAlign: 'center', padding: '3px', boxSizing: 'border-box', }}>
+        &copy; Istrability, 2019-{new Date().toLocaleDateString('sv-SE', { timeZone: 'Europe/Zagreb' }).substring(0,4)}
       </div>
     </div>
   );

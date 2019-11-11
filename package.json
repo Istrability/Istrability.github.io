@@ -17,6 +17,7 @@
     "@types/react": "^16.14.20",
     "@types/react-dom": "^16.9.14",
     "@types/react-redux": "^7.1.20",
+    "country-flag-icons": "^1.4.14",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.6",
@@ -27,6 +28,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build_github": "BUILD_PATH='./docs' react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
