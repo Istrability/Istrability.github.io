@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.e70ca62e.chunk.css",
-    "main.js": "/static/js/main.78b95dd5.chunk.js",
-    "main.js.map": "/static/js/main.78b95dd5.chunk.js.map",
+    "main.js": "/static/js/main.5f60ec04.chunk.js",
+    "main.js.map": "/static/js/main.5f60ec04.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.83e6c2d1.js",
     "runtime-main.js.map": "/static/js/runtime-main.83e6c2d1.js.map",
     "static/js/2.fdaf4f3d.chunk.js": "/static/js/2.fdaf4f3d.chunk.js",
@@ -13,6 +13,7 @@
     "static/media/css.ad674aa8.png": "/static/media/css.ad674aa8.png",
     "static/media/html.f565d178.png": "/static/media/html.f565d178.png",
     "static/media/linux.c6a6048d.png": "/static/media/linux.c6a6048d.png",
+    "static/media/logo6.517ccc2f.png": "/static/media/logo6.517ccc2f.png",
     "static/media/materialui.15980d5c.png": "/static/media/materialui.15980d5c.png",
     "static/media/office1.17331a3a.jpg": "/static/media/office1.17331a3a.jpg",
     "static/media/office2.0a161bcd.jpg": "/static/media/office2.0a161bcd.jpg",
@@ -25,6 +26,6 @@
     "static/js/runtime-main.83e6c2d1.js",
     "static/js/2.fdaf4f3d.chunk.js",
     "static/css/main.e70ca62e.chunk.css",
-    "static/js/main.78b95dd5.chunk.js"
+    "static/js/main.5f60ec04.chunk.js"
   ]
 }
