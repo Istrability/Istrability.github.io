@@ -1,7 +1,11 @@
-import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import { Link } from "react-router-dom";
 import Flags from "country-flag-icons/react/3x2";
+import { useAppDispatch, useAppSelector } from "../../../app/hooks";
+import {
+  selectLanguage,
+  setLanguage,
+} from "../../../features/language/languageSlice";
 
 /* import SpreadMenu from './SpreadMenu'; */
 /* import SidebarMenu from './SidebarMenu'; */
@@ -90,7 +94,8 @@ const useStyles = makeStyles({
 const TitleRow =
   (/* { servicesClickHandler, contactClickHandler, logoClickedHandler, currentRoute } */) => {
     const classes = useStyles();
-    const [language, setLanguage] = useState("US");
+    const language = useAppSelector(selectLanguage);
+    const dispatch = useAppDispatch();
 
     return (
       <>
@@ -112,26 +117,26 @@ const TitleRow =
               className={classes.flag}
               style={{
                 marginRight: "1rem",
-                opacity: language === "US" ? 1 : 0.5,
+                opacity: language === "en" ? 1 : 0.5,
               }}
-              onClick={() => setLanguage("US")}
+              onClick={() => dispatch(setLanguage("en"))}
             >
-              <Flags.US title={"English"} />
+              <Flags.GB title={"English"} />
             </div>
             <div
               className={classes.flag}
               style={{
                 marginRight: "1rem",
-                opacity: language === "HR" ? 1 : 0.5,
+                opacity: language === "hr" ? 1 : 0.5,
               }}
-              onClick={() => setLanguage("HR")}
+              onClick={() => dispatch(setLanguage("hr"))}
             >
               <Flags.HR title={"Hrvatski"} />
             </div>
             <div
               className={classes.flag}
-              style={{ opacity: language === "IT" ? 1 : 0.5 }}
-              onClick={() => setLanguage("IT")}
+              style={{ opacity: language === "it" ? 1 : 0.5 }}
+              onClick={() => dispatch(setLanguage("it"))}
             >
               <Flags.IT title={"Italiano"} />
             </div>

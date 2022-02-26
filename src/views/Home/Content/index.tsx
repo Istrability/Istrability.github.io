@@ -7,6 +7,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DiagnosisThumbnail from "../DiagnosisThumbnail";
 import diagnosesData from "../../../diagnosesData";
 import { GitHub } from "@mui/icons-material";
+import { FormattedMessage } from "react-intl";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -87,7 +88,7 @@ const Content = () => {
               fontWeight: "bold",
             }}
           >
-            About us
+            <FormattedMessage id="aboutUs" />
           </div>
           <div
             style={{
@@ -97,10 +98,10 @@ const Content = () => {
             }}
           >
             <div style={{ marginBottom: "1rem", textAlign: "center" }}>
-              {`Istrability is a software development company that is actively developing Web apps (and other software) since 2019. With the help of our expert knowledge you can realize your digital ideas or optimize your business processes.`}
+              <FormattedMessage id="aboutUsContent1" />
             </div>
             <div style={{ marginBottom: "1rem", textAlign: "center" }}>
-              {`Our area of expertize is building frontend part of Web apps (in React), backend part of Web apps and scripting (in NodeJS), whole Web apps, and system apps (in Rust).`}
+              <FormattedMessage id="aboutUsContent2" />
             </div>
           </div>
         </div>
@@ -115,7 +116,7 @@ const Content = () => {
               fontWeight: "bold",
             }}
           >
-            Contact &amp; Location
+            <FormattedMessage id="contactAndLocation" />
           </div>
           <div
             style={{
@@ -179,7 +180,7 @@ const Content = () => {
               fontWeight: "bold",
             }}
           >
-            Products &amp; Services
+            <FormattedMessage id="productsAndServices" />
           </div>
           {/* <div style={{ fontSize: '0.8rem', marginBottom: '0rem', fontWeight: 'normal' }}>(for details click on the image)</div> */}
           <div className={classes.gallery}>

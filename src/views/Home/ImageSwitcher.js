@@ -5,6 +5,7 @@ import titleComposed3 from "../../resources/office1.jpg";
 /* import titleComposed4 from "../../resources/titleComposed1.jpg";
 import titleComposed5 from "../../resources/titleComposed2.jpg"; */
 import { makeStyles } from "@mui/styles";
+import { FormattedMessage } from "react-intl";
 
 const overlay =
   "linear-gradient(to bottom, rgba(0, 0, 8, 1), rgba(0,0,0,0), rgba(255, 255, 255, 0.40))";
@@ -107,7 +108,9 @@ const ImageSwitcher = () => {
         >
           Istrability
         </div>
-        <div>Digitalize your ideas</div>
+        <div>
+          <FormattedMessage id="title" />
+        </div>
       </div>
     </div>
   );
