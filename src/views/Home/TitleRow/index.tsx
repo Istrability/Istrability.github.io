@@ -64,8 +64,8 @@ const useStyles = makeStyles({
       
   }, */
   image: {
-    width: "3.5rem",
-    height: "3.5rem",
+    width: "3rem",
+    height: "3rem",
     backgroundSize: "contain",
   },
   "@media (min-width: 960px)": {
