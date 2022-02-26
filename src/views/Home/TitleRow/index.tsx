@@ -6,6 +6,7 @@ import {
   selectLanguage,
   setLanguage,
 } from "../../../features/language/languageSlice";
+import logo from "../../../resources/logo6.png";
 
 /* import SpreadMenu from './SpreadMenu'; */
 /* import SidebarMenu from './SidebarMenu'; */
@@ -16,7 +17,7 @@ const useStyles = makeStyles({
     top: "0rem",
     backgroundColor: "#0B0B18",
     width: "100%",
-    padding: "0rem 1.5rem 0rem 1.5rem",
+    padding: "0rem 1.5rem 0rem 1.2rem",
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
@@ -49,7 +50,7 @@ const useStyles = makeStyles({
   title: {
     color: "#FFFFFE",
     fontSize: "1.5rem",
-    // fontWeight: 'bold',
+    fontWeight: "bold",
     cursor: "pointer",
     textDecoration: "none",
     display: "flex",
@@ -62,6 +63,11 @@ const useStyles = makeStyles({
   /* '@media (min-width: 600px)': {
       
   }, */
+  image: {
+    width: "3.5rem",
+    height: "3.5rem",
+    backgroundSize: "contain",
+  },
   "@media (min-width: 960px)": {
     titleRow: {
       height: "4rem",
@@ -88,6 +94,10 @@ const useStyles = makeStyles({
     titleIcon: {
       fontSize: "1.8rem",
     },
+    image: {
+      width: "4rem",
+      height: "4rem",
+    },
   },
 });
 
@@ -105,7 +115,13 @@ const TitleRow =
         <div className={classes.titlePlaceholder} />
         <div className={classes.titleRow}>
           <Link to="/" className={classes.title}>
-            Istrability
+            <div
+              className={classes.image}
+              style={{
+                backgroundImage: `url(${logo})`,
+              }}
+            />
+            &nbsp;Istrability
           </Link>
 
           {/* <div className={classes.mdMenu}>
