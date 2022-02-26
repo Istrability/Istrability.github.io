@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.e70ca62e.chunk.css",
-    "main.js": "/static/js/main.5387364f.chunk.js",
-    "main.js.map": "/static/js/main.5387364f.chunk.js.map",
+    "main.js": "/static/js/main.9555d84e.chunk.js",
+    "main.js.map": "/static/js/main.9555d84e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.83e6c2d1.js",
     "runtime-main.js.map": "/static/js/runtime-main.83e6c2d1.js.map",
     "static/js/2.5e94d8f1.chunk.js": "/static/js/2.5e94d8f1.chunk.js",
@@ -14,16 +14,17 @@
     "static/media/html.f565d178.png": "/static/media/html.f565d178.png",
     "static/media/linux.c6a6048d.png": "/static/media/linux.c6a6048d.png",
     "static/media/materialui.15980d5c.png": "/static/media/materialui.15980d5c.png",
+    "static/media/office1.17331a3a.jpg": "/static/media/office1.17331a3a.jpg",
+    "static/media/office2.0a161bcd.jpg": "/static/media/office2.0a161bcd.jpg",
+    "static/media/office3.220d7d25.jpg": "/static/media/office3.220d7d25.jpg",
     "static/media/react.97d059a4.png": "/static/media/react.97d059a4.png",
     "static/media/redux.692b2c1f.png": "/static/media/redux.692b2c1f.png",
-    "static/media/rust.5f0719d0.png": "/static/media/rust.5f0719d0.png",
-    "static/media/titleComposed1.5db4a4ca.jpg": "/static/media/titleComposed1.5db4a4ca.jpg",
-    "static/media/titleComposed2.0c28a8b3.jpg": "/static/media/titleComposed2.0c28a8b3.jpg"
+    "static/media/rust.5f0719d0.png": "/static/media/rust.5f0719d0.png"
   },
   "entrypoints": [
     "static/js/runtime-main.83e6c2d1.js",
     "static/js/2.5e94d8f1.chunk.js",
     "static/css/main.e70ca62e.chunk.css",
-    "static/js/main.5387364f.chunk.js"
+    "static/js/main.9555d84e.chunk.js"
   ]
 }
