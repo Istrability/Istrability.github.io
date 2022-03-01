@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import titleComposed1 from "../../resources/office3.jpg";
 import titleComposed2 from "../../resources/office2.jpg";
 import titleComposed3 from "../../resources/office1.jpg";
@@ -61,7 +61,7 @@ const useStyles = makeStyles({
 
 const ImageSwitcher = () => {
   const classes = useStyles();
-  const [frontImageIndex, setFrontImageIndex] = useState(0);
+  const [frontImageIndex, setFrontImageIndex] = useState<number>(0);
 
   useEffect(() => {
     const timeout = setTimeout(() => {
