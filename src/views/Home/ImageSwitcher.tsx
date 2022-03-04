@@ -5,7 +5,8 @@ import titleComposed3 from "../../resources/office1.jpg";
 /* import titleComposed4 from "../../resources/titleComposed1.jpg";
 import titleComposed5 from "../../resources/titleComposed2.jpg"; */
 import { makeStyles } from "@mui/styles";
-import { FormattedMessage } from "react-intl";
+import { FormattedMessage, useIntl } from "react-intl";
+import AnimatedText from "../../components/AnimatedText";
 
 const overlay =
   "linear-gradient(to bottom, rgba(0, 0, 8, 1), rgba(0,0,0,0), rgba(255, 255, 255, 0.40))";
@@ -62,7 +63,7 @@ const useStyles = makeStyles({
 const ImageSwitcher = () => {
   const classes = useStyles();
   const [frontImageIndex, setFrontImageIndex] = useState<number>(0);
-
+  const t = useIntl();
   useEffect(() => {
     const timeout = setTimeout(() => {
       setFrontImageIndex((frontImageIndex + 1) % 3);
@@ -106,10 +107,13 @@ const ImageSwitcher = () => {
             marginTop: "-4rem",
           }}
         >
-          Istrability
+          <AnimatedText speed={80}>Istrability</AnimatedText>
         </div>
         <div>
-          <FormattedMessage id="title" />
+          {/* <FormattedMessage id="title" /> */}
+          <AnimatedText delay={900} speed={50}>
+            {t.formatMessage({ id: "title" })}
+          </AnimatedText>
         </div>
       </div>
     </div>

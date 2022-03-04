@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import TitleRow from "./TitleRow";
 import { makeStyles } from "@mui/styles";
 import { useLocation } from "react-router-dom";
@@ -27,6 +27,10 @@ const Home = () => {
     document.getElementsByTagName("html")[0].scrollTop = 0;
   }, [location]);
 
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    setTimeout(() => setShow(true), 1500);
+  }, []);
   return (
     <div className={classes.outer}>
       <TitleRow />
@@ -41,6 +45,8 @@ const Home = () => {
           maxWidth: "950px",
           margin: "auto",
           flexDirection: "column",
+          opacity: show ? 1 : 0,
+          transition: "opacity 2s",
         }}
       >
         <Content />
