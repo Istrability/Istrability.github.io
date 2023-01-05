@@ -2,9 +2,9 @@ const it = {
   title: "Digitalizza le tue idee",
   aboutUs: "Chi siamo",
   aboutUsContent1:
-    "Istrability è un'azienda di sviluppo software che sviluppa attivamente le applicazioni web (e altro software) dal 2019. Grazie alla nostra esperta conoscenza, puoi realizzare le tue idee digitali o ottimizzare i tuoi processi aziendali.",
+    "Istrability è una società informatica di ampia esperienza nello sviluppo di tutti i tipi di software, con un focalizzo primario sulle technologie Web. Possiamo aiutarvi a realizzare nel modo migliore possibile le vostre idee digitali e ad ottimizzare i processi aziendali della vostra realtà imprenditoriale.",
   aboutUsContent2:
-    "Il nostro campo di espertise è la costruzione della parte frontend delle applicazioni web (in React), della parte backend delle applicazioni web e dello scripting (in NodeJS), delle applicazioni web complete e delle applicazioni di sistema (in Rust).",
+    "Per quanto riguarda le tecnologie usate, ci affidiamo a React per il front-end, NodeJS per il back-end, e Rust per lo sviluppo delle applicazioni sistemiche.",
   contactAndLocation: "Contatto & Posizione",
   productsAndServices: "Prodotti & Servizi",
 };
