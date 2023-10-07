@@ -34,7 +34,7 @@ const useStyles = makeStyles((theme) => {
     },
     galleryItemTitle: {
       fontSize: "1rem",
-      marginBottom: "0.5rem",
+      marginBottom: "0.25rem",
     },
     contactItem: {
       margin: "0.8rem auto 0.6rem",
@@ -62,13 +62,13 @@ const useStyles = makeStyles((theme) => {
         marginBottom: "3.5rem",
       },
       galleryItem: {
-        padding: "0.5rem 0.41%",
+        padding: "0.75rem 0.41%",
         boxSizing: "border-box",
         width: "33.33%",
       },
       galleryItemTitle: {
         fontSize: "1.2rem",
-        marginBottom: "0.5rem",
+        marginBottom: "0.25rem",
       },
     },
   };
