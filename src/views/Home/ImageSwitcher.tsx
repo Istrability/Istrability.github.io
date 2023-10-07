@@ -9,7 +9,7 @@ import { FormattedMessage, useIntl } from "react-intl";
 import AnimatedText from "../../components/AnimatedText";
 
 const overlay =
-  "linear-gradient(to bottom, rgba(0, 0, 8, 1), rgba(0,0,0,0), rgba(255, 255, 255, 0.40))";
+  "linear-gradient(to bottom, rgba(0, 0, 10, 0.8), rgba(0,0,0,0), rgba(255, 255, 255, 0.2))";
 
 const useStyles = makeStyles({
   imageContainer: {
@@ -27,7 +27,7 @@ const useStyles = makeStyles({
     background: "black",
   },
   image: {
-    filter: "brightness(47%)",
+    filter: "brightness(95%)",
     width: "100%",
     height: "100%",
     backgroundRepeat: "repeat-x",
