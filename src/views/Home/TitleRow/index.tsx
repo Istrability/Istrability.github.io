@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import { Link } from "react-router-dom";
 import Flags from "country-flag-icons/react/3x2";
 import { useAppDispatch, useAppSelector } from "../../../app/hooks";
 import {
@@ -7,6 +6,7 @@ import {
   setLanguage,
 } from "../../../features/language/languageSlice";
 import logo from "../../../resources/logo6.png";
+import { IconButton } from "@mui/material";
 
 /* import SpreadMenu from './SpreadMenu'; */
 /* import SidebarMenu from './SidebarMenu'; */
@@ -43,15 +43,23 @@ const useStyles = makeStyles({
     height: "100%",
     display: "flex",
     alignItems: "center",
+    columnGap: "1rem",
   },
   flag: {
-    width: "1.4rem",
+    display: "block !important",
+    width: "1.5rem",
+    padding: "0 1px !important",
+    borderRadius: "2px !important",
+    "&:focus-visible": {
+      outline: "1px solid white !important",
+    },
   },
   title: {
     color: "#FFFFFE",
     fontSize: "1.5rem",
     fontWeight: "bold",
-    cursor: "pointer",
+    // cursor: "pointer",
+    userSelect: "none",
     textDecoration: "none",
     display: "flex",
     flexDirection: "row",
@@ -80,8 +88,7 @@ const useStyles = makeStyles({
       fontSize: "1.8rem",
     },
     flag: {
-      width: "1.5rem",
-      cursor: "pointer",
+      width: "1.6rem",
     },
     mdMenu: {
       //display: 'flex',
@@ -114,7 +121,7 @@ const TitleRow =
         />
         <div className={classes.titlePlaceholder} />
         <div className={classes.titleRow}>
-          <Link to="/" className={classes.title}>
+          {/* <Link to="/" className={classes.title}>
             <div
               className={classes.image}
               style={{
@@ -122,40 +129,50 @@ const TitleRow =
               }}
             />
             &nbsp;Istrability
-          </Link>
+          </Link> */}
+          <div className={classes.title}>
+            <div
+              className={classes.image}
+              style={{
+                backgroundImage: `url(${logo})`,
+              }}
+            />
+            &nbsp;Istrability
+          </div>
 
           {/* <div className={classes.mdMenu}>
                     <SpreadMenu />
                 </div> */}
 
           <div className={classes.xsMenu}>
-            <div
+            <IconButton
               className={classes.flag}
               style={{
-                marginRight: "1rem",
                 opacity: language === "en" ? 1 : 0.5,
               }}
               onClick={() => dispatch(setLanguage("en"))}
+              disableFocusRipple={true}
             >
               <Flags.GB title={"English"} />
-            </div>
-            <div
+            </IconButton>
+            <IconButton
               className={classes.flag}
               style={{
-                marginRight: "1rem",
                 opacity: language === "hr" ? 1 : 0.5,
               }}
               onClick={() => dispatch(setLanguage("hr"))}
+              disableFocusRipple={true}
             >
               <Flags.HR title={"Hrvatski"} />
-            </div>
-            <div
+            </IconButton>
+            <IconButton
               className={classes.flag}
               style={{ opacity: language === "it" ? 1 : 0.5 }}
               onClick={() => dispatch(setLanguage("it"))}
+              disableFocusRipple={true}
             >
               <Flags.IT title={"Italiano"} />
-            </div>
+            </IconButton>
             {/* <SidebarMenu /> */}
           </div>
         </div>
