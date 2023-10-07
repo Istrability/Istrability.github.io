@@ -5,7 +5,7 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import DiagnosisThumbnail from "../DiagnosisThumbnail";
-import diagnosesData from "../../../diagnosesData";
+import technologiesData from "../../../technologiesData";
 import { GitHub } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
 
@@ -184,14 +184,14 @@ const Content = () => {
           </div>
           {/* <div style={{ fontSize: '0.8rem', marginBottom: '0rem', fontWeight: 'normal' }}>(for details click on the image)</div> */}
           <div className={classes.gallery}>
-            {diagnosesData.map((diagnosisData) => (
-              <div key={diagnosisData.id} className={classes.galleryItem}>
+            {technologiesData.map((technology) => (
+              <div key={technology.id} className={classes.galleryItem}>
                 <div className={classes.galleryItemTitle}>
-                  {diagnosisData.name}
+                  {technology.name}
                 </div>
                 <DiagnosisThumbnail
-                  key={diagnosisData.id}
-                  diagnosisData={diagnosisData}
+                  key={technology.id}
+                  data={technology}
                 />
               </div>
             ))}

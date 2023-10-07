@@ -22,13 +22,7 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-const DiagnosisThumbnail = ({
-  diagnosisData,
-  style,
-}: {
-  diagnosisData: any;
-  style?: any;
-}) => {
+const DiagnosisThumbnail = ({ data, style }: { data: any; style?: any }) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
 
@@ -40,14 +34,15 @@ const DiagnosisThumbnail = ({
         onClick={() => setOpen(true)}
       >
         <div
-          /* alt={diagnosisData.name} */
-          title={diagnosisData.name}
-          /* src={diagnosisData.imageUrl} */
+          /* alt={data.name} */
+          title={data.name}
+          /* src={data.imageUrl} */
           /* width='100%'
             height='80%' */
           className={classes.inner}
           style={{
-            backgroundImage: `url(${diagnosisData.imageUrl})`,
+            backgroundImage: `url(${data.imageUrl})`,
+            ...data.innerStyle,
           }}
         />
       </div>
