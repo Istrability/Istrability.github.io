@@ -146,7 +146,7 @@ const Content = () => {
                             <FacebookIcon className={classes.contactItemIcon} style={{ color: '#673ab7' }} />
                         </a> */}
             <a
-              href="https:/github.com/istrability/"
+              href="https://github.com/istrability"
               className={classes.contactItem}
             >
               <GitHub className={classes.contactItemIcon} />
