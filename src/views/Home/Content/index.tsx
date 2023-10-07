@@ -41,6 +41,7 @@ const useStyles = makeStyles((theme) => {
       display: "flex",
       alignItems: "center",
       textDecoration: "none",
+      padding: "0 12px 0 6px",
     },
     contactItemIcon: {
       paddingRight: "5px",
@@ -125,11 +126,7 @@ const Content = () => {
               justifyContent: "space-between",
             }}
           >
-            <a
-              href="tel:+385958576949"
-              className={classes.contactItem}
-              style={{ display: "flex", alignItems: "center" }}
-            >
+            <a href="tel:+385958576949" className={classes.contactItem}>
               <PhoneIcon className={classes.contactItemIcon} />
               <span className={classes.contactItemContent}>
                 +385 95 857 6949
@@ -189,10 +186,7 @@ const Content = () => {
                 <div className={classes.galleryItemTitle}>
                   {technology.name}
                 </div>
-                <DiagnosisThumbnail
-                  key={technology.id}
-                  data={technology}
-                />
+                <DiagnosisThumbnail key={technology.id} data={technology} />
               </div>
             ))}
           </div>
