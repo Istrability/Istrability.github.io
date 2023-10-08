@@ -1,5 +1,4 @@
 import Grid from "@mui/material/Grid";
-import { makeStyles } from "@mui/styles";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
@@ -7,77 +6,72 @@ import GaleryItem from "./GalleryItem";
 import technologiesData from "../../../technologiesData";
 import { GitHub } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
+import { Box } from "@mui/material";
 
-const useStyles = makeStyles((theme) => {
-  return {
-    outer: {
-      textAlign: "center",
-      width: "1000px",
-      maxWidth: "100%",
-      backgroundColor: "#F9F9F9",
-      borderRadius: "30px",
-      padding: "0rem 1rem",
+const styles = {
+  outer: {
+    textAlign: "center",
+    width: "1000px",
+    maxWidth: "100%",
+    backgroundColor: "#F9F9F9",
+    borderRadius: "30px",
+    padding: "0rem 1rem",
+    margin: "1rem 0rem 0rem",
+    "@media (min-width: 600px)": {
+      padding: "0px 50px",
       margin: "1rem 0rem 0rem",
     },
-    gallery: {
-      display: "flex",
-      flexDirection: "row",
-      flexWrap: "wrap",
-      alignItems: "flex-start",
+  },
+  gallery: {
+    display: "flex",
+    flexDirection: "row",
+    flexWrap: "wrap",
+    alignItems: "flex-start",
+  },
+  galleryItem: {
+    padding: "1rem 1% 1rem",
+    display: "flex",
+    flexDirection: "column",
+    width: "48%",
+    "@media (min-width: 600px)": {
+      padding: "0.75rem 0.41%",
+      boxSizing: "border-box",
+      width: "33.33%",
     },
-    galleryItem: {
-      padding: "1rem 1% 1rem",
-      display: "flex",
-      flexDirection: "column",
-      width: "48%",
-    },
-    galleryItemTitle: {
-      fontSize: "1rem",
+  },
+  galleryItemTitle: {
+    fontSize: "1rem",
+    marginBottom: "0.25rem",
+    "@media (min-width: 600px)": {
+      fontSize: "1.2rem",
       marginBottom: "0.25rem",
     },
-    contactItem: {
-      margin: "0.8rem auto 0.6rem",
-      display: "flex",
-      alignItems: "center",
-      textDecoration: "none",
-      padding: "0 12px 0 6px",
-    },
-    contactItemIcon: {
-      paddingRight: "5px",
-      color: "black",
-    },
-    contactItemContent: {
-      color: "rgb(0, 0, 238)",
-    },
-    servicesWrapper: {
-      marginBottom: "2.5rem",
-    },
+  },
+  contactItem: {
+    margin: "0.8rem auto 0.6rem",
+    display: "flex",
+    alignItems: "center",
+    textDecoration: "none",
+    padding: "0 12px 0 6px",
+  },
+  contactItemIcon: {
+    paddingRight: "5px",
+    color: "black",
+  },
+  contactItemContent: {
+    color: "rgb(0, 0, 238)",
+  },
+  servicesWrapper: {
+    marginBottom: "2.5rem",
     "@media (min-width: 600px)": {
-      outer: {
-        padding: "0px 50px",
-        margin: "1rem 0rem 0rem",
-      },
-      servicesWrapper: {
-        marginBottom: "3.5rem",
-      },
-      galleryItem: {
-        padding: "0.75rem 0.41%",
-        boxSizing: "border-box",
-        width: "33.33%",
-      },
-      galleryItemTitle: {
-        fontSize: "1.2rem",
-        marginBottom: "0.25rem",
-      },
+      marginBottom: "3.5rem",
     },
-  };
-});
+  },
+};
 
 const Content = () => {
-  const classes = useStyles();
-
   return (
-    <Grid container className={classes.outer}>
+    <Grid container sx={styles.outer}>
       <Grid item xs={false} md={1} />
       <Grid item xs={12} md={10} style={{ textAlign: "center" }}>
         <div style={{ marginTop: "2rem", marginBottom: "3.5rem" }}>
@@ -125,50 +119,56 @@ const Content = () => {
               justifyContent: "space-between",
             }}
           >
-            <a href="tel:+385958576949" className={classes.contactItem}>
-              <PhoneIcon className={classes.contactItemIcon} />
-              <span className={classes.contactItemContent}>
+            <Box component="a" href="tel:+385958576949" sx={styles.contactItem}>
+              <PhoneIcon sx={styles.contactItemIcon} />
+              <Box component="span" sx={styles.contactItemContent}>
                 +385 95 857 6949
-              </span>
-            </a>
-            <a href="mailto:vrafaeli@gmail.com" className={classes.contactItem}>
-              <MailOutlineIcon className={classes.contactItemIcon} />
-              <span className={classes.contactItemContent}>
-                vrafaeli@msn.com
-              </span>
-            </a>
-            {/* <a href='https://www.facebook.com/istrability/' className={classes.contactItem}>
-                            <span className={classes.contactItemContent}>facebook.com/istrability</span>
-                            <FacebookIcon className={classes.contactItemIcon} style={{ color: '#673ab7' }} />
-                        </a> */}
-            <a
-              href="https://github.com/istrability"
-              className={classes.contactItem}
+              </Box>
+            </Box>
+            <Box
+              component="a"
+              href="mailto:vrafaeli@gmail.com"
+              sx={styles.contactItem}
             >
-              <GitHub className={classes.contactItemIcon} />
-              <span className={classes.contactItemContent}>
+              <MailOutlineIcon sx={styles.contactItemIcon} />
+              <Box component="span" sx={styles.contactItemContent}>
+                vrafaeli@msn.com
+              </Box>
+            </Box>
+            {/* <Box component="a" href='https://www.facebook.com/istrability/' sx={styles.contactItem}>
+                            <Box component="span" sx={styles.contactItemContent}>facebook.com/istrability</Box>
+                            <FacebookIcon sx={styles.contactItemIcon} style={{ color: '#673ab7' }} />
+                        </Box> */}
+            <Box
+              component="a"
+              href="https://github.com/istrability"
+              sx={styles.contactItem}
+            >
+              <GitHub sx={styles.contactItemIcon} />
+              <Box component="span" sx={styles.contactItemContent}>
                 github.com/istrability
-              </span>
-            </a>
-            <a
+              </Box>
+            </Box>
+            <Box
+              component="a"
               /* href='https://www.google.hr/maps/@45.7918911,15.9551435,6.00z' */
               href="https://www.google.com/maps/place/Zagreb/@45.8401746,15.8942922,5z"
               target="_blank"
               rel="noopener noreferrer"
-              className={classes.contactItem}
+              sx={styles.contactItem}
             >
-              <LocationOnIcon className={classes.contactItemIcon} />
-              <span className={classes.contactItemContent}>
+              <LocationOnIcon sx={styles.contactItemIcon} />
+              <Box component="span" sx={styles.contactItemContent}>
                 Zagreb, Croatia (UTC+1)
-              </span>
+              </Box>
               {/* <div>(klikni za kartu)</div> */}
-            </a>
+            </Box>
           </div>
         </div>
       </Grid>
 
       <Grid item xs={12} md={12} style={{ textAlign: "center" }}>
-        <div className={classes.servicesWrapper}>
+        <Box sx={styles.servicesWrapper}>
           <div
             style={{
               fontSize: "1.5rem",
@@ -179,17 +179,15 @@ const Content = () => {
             <FormattedMessage id="productsAndServices" />
           </div>
           {/* <div style={{ fontSize: '0.8rem', marginBottom: '0rem', fontWeight: 'normal' }}>(for details click on the image)</div> */}
-          <div className={classes.gallery}>
+          <Box sx={styles.gallery}>
             {technologiesData.map((technology) => (
-              <div key={technology.id} className={classes.galleryItem}>
-                <div className={classes.galleryItemTitle}>
-                  {technology.name}
-                </div>
+              <Box key={technology.id} sx={styles.galleryItem}>
+                <Box sx={styles.galleryItemTitle}>{technology.name}</Box>
                 <GaleryItem key={technology.id} data={technology} />
-              </div>
+              </Box>
             ))}
-          </div>
-        </div>
+          </Box>
+        </Box>
       </Grid>
 
       {/* <Grid item xs={12} md={12} style={{textAlign: 'center'}}>

@@ -4,14 +4,14 @@ import titleComposed2 from "../../resources/office2.jpg";
 import titleComposed3 from "../../resources/office1.jpg";
 /* import titleComposed4 from "../../resources/titleComposed1.jpg";
 import titleComposed5 from "../../resources/titleComposed2.jpg"; */
-import { makeStyles } from "@mui/styles";
-import { FormattedMessage, useIntl } from "react-intl";
+import { useIntl } from "react-intl";
 import AnimatedText from "../../components/AnimatedText";
+import { Box } from "@mui/material";
 
 const overlay =
   "linear-gradient(to bottom, rgba(0, 0, 10, 0.8), rgba(0,0,0,0), rgba(255, 255, 255, 0.2))";
 
-const useStyles = makeStyles({
+const styles = {
   imageContainer: {
     marginLeft: "auto",
     marginRight: "auto",
@@ -25,6 +25,11 @@ const useStyles = makeStyles({
     boxSizing: "content-box",
     position: "relative",
     background: "black",
+
+    "@media (min-width: 960px)": {
+      marginTop: "1rem",
+      marginBottom: "0.5rem",
+    },
   },
   image: {
     filter: "brightness(95%)",
@@ -49,19 +54,9 @@ const useStyles = makeStyles({
     justifyContent: "center",
     alignItems: "center",
   },
-  /* '@media (min-width: 600px)': {
-      
-  }, */
-  "@media (min-width: 960px)": {
-    imageContainer: {
-      marginTop: "1rem",
-      marginBottom: "0.5rem",
-    },
-  },
-});
+};
 
 const ImageSwitcher = () => {
-  const classes = useStyles();
   const [frontImageIndex, setFrontImageIndex] = useState<number>(0);
   const t = useIntl();
   useEffect(() => {
@@ -73,32 +68,32 @@ const ImageSwitcher = () => {
   }, [frontImageIndex]);
 
   return (
-    <div className={classes.imageContainer}>
-      <div
-        className={classes.image}
+    <Box sx={styles.imageContainer}>
+      <Box
+        sx={styles.image}
         style={{
           backgroundImage: `${overlay}, url(${titleComposed1})`,
           backgroundColor: "#080814",
           opacity: frontImageIndex === 0 ? 1 : 0,
         }}
       />
-      <div
-        className={classes.image}
+      <Box
+        sx={styles.image}
         style={{
           backgroundImage: `${overlay}, url(${titleComposed2})`,
           backgroundColor: "#080814",
           opacity: frontImageIndex === 1 ? 1 : 0,
         }}
       />
-      <div
-        className={classes.image}
+      <Box
+        sx={styles.image}
         style={{
           backgroundImage: `${overlay}, url(${titleComposed3})`,
           backgroundColor: "#080814",
           opacity: frontImageIndex === 2 ? 1 : 0,
         }}
       />
-      <div className={classes.textContainer}>
+      <Box sx={styles.textContainer}>
         <div
           style={{
             fontSize: "3rem",
@@ -115,8 +110,8 @@ const ImageSwitcher = () => {
             {t.formatMessage({ id: "title" })}
           </AnimatedText>
         </div>
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 };
 

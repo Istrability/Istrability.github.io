@@ -1,27 +1,12 @@
-import { useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import TitleRow from "./TitleRow";
-import { makeStyles } from "@mui/styles";
 import { useLocation } from "react-router-dom";
 import Content from "./Content";
 import ImageSwitcher from "./ImageSwitcher";
 import { Footer } from "./Footer";
+import { Box } from "@mui/material";
 
-const useStyles = makeStyles((theme) => {
-  return {
-    outer: {
-      minHeight: "100%",
-      position: "absolute",
-      width: "100vw",
-      backgroundColor: "#F9F9F9",
-    },
-    //[theme.breakpoints.up('sm')/* '@media (min-width: 600px)' */]: {
-    //},
-  };
-});
-
-const Home = () => {
-  const classes = useStyles();
-
+const Home: FC = () => {
   let location = useLocation();
   useEffect(() => {
     /* console.log('scroll to top:', document.getElementsByTagName('body')[0]); */
@@ -33,7 +18,14 @@ const Home = () => {
     setTimeout(() => setShow(true), 1500);
   }, []);
   return (
-    <div className={classes.outer}>
+    <Box
+      sx={{
+        minHeight: "100%",
+        position: "absolute",
+        width: "100vw",
+        backgroundColor: "#F9F9F9",
+      }}
+    >
       <TitleRow />
 
       <ImageSwitcher />
@@ -54,7 +46,7 @@ const Home = () => {
       </div>
 
       <Footer />
-    </div>
+    </Box>
   );
 };
 
