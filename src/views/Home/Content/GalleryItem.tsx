@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import React, { useState } from "react";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -22,17 +21,12 @@ const useStyles = makeStyles((theme) => {
   };
 });
 
-const DiagnosisThumbnail = ({ data, style }: { data: any; style?: any }) => {
+const GalleryItem = ({ data, style }: { data: any; style?: any }) => {
   const classes = useStyles();
-  const [open, setOpen] = useState(false);
 
   return (
     <>
-      <div
-        className={classes.outer}
-        style={style}
-        onClick={() => setOpen(true)}
-      >
+      <div className={classes.outer} style={style}>
         <div
           /* alt={data.name} */
           title={data.name}
@@ -50,4 +44,4 @@ const DiagnosisThumbnail = ({ data, style }: { data: any; style?: any }) => {
   );
 };
 
-export default DiagnosisThumbnail;
+export default GalleryItem;

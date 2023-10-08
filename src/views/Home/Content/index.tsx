@@ -1,10 +1,9 @@
-import React from "react";
 import Grid from "@mui/material/Grid";
 import { makeStyles } from "@mui/styles";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import PhoneIcon from "@mui/icons-material/Phone";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-import DiagnosisThumbnail from "../DiagnosisThumbnail";
+import GaleryItem from "./GalleryItem";
 import technologiesData from "../../../technologiesData";
 import { GitHub } from "@mui/icons-material";
 import { FormattedMessage } from "react-intl";
@@ -186,7 +185,7 @@ const Content = () => {
                 <div className={classes.galleryItemTitle}>
                   {technology.name}
                 </div>
-                <DiagnosisThumbnail key={technology.id} data={technology} />
+                <GaleryItem key={technology.id} data={technology} />
               </div>
             ))}
           </div>

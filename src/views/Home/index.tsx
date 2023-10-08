@@ -4,6 +4,7 @@ import { makeStyles } from "@mui/styles";
 import { useLocation } from "react-router-dom";
 import Content from "./Content";
 import ImageSwitcher from "./ImageSwitcher";
+import { Footer } from "./Footer";
 
 const useStyles = makeStyles((theme) => {
   return {
@@ -52,22 +53,7 @@ const Home = () => {
         <Content />
       </div>
 
-      <div
-        style={{
-          width: "100%",
-          backgroundColor: "#0B0B18",
-          color: "white",
-          fontSize: "0.9rem",
-          textAlign: "center",
-          padding: "3px",
-          boxSizing: "border-box",
-        }}
-      >
-        &copy; Istrability, 2019-
-        {new Date()
-          .toLocaleDateString("sv-SE", { timeZone: "Europe/Zagreb" })
-          .substring(0, 4)}
-      </div>
+      <Footer />
     </div>
   );
 };
