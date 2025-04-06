@@ -132,7 +132,7 @@ const Content = () => {
             >
               <MailOutlineIcon sx={styles.contactItemIcon} />
               <Box component="span" sx={styles.contactItemContent}>
-                vrafaeli@msn.com
+                ceo@istrability.hr
               </Box>
             </Box>
             {/* <Box component="a" href='https://www.facebook.com/istrability/' sx={styles.contactItem}>
